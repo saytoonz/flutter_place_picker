@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     ),
   );
 
-  MyApp({Key key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -46,14 +46,14 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  PickResult selectedPlace;
+  PickResult? selectedPlace;
 
   final LatLng kInitialPosition = const LatLng(-33.8567844, 151.213108);
 
@@ -86,8 +86,8 @@ class _HomePageState extends State<HomePage> {
                           onPlacePicked: (result) {
                             selectedPlace = result;
 
-                            print(result.geometry.location.lat);
-                            print(result.geometry.location.lng);
+                            print(result.geometry!.location.lat);
+                            print(result.geometry!.location.lng);
                             print(result.placeId);
                             print(result.formattedAddress);
 
@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
               ),
               selectedPlace == null
                   ? Container()
-                  : Text(selectedPlace.formattedAddress ?? ""),
+                  : Text(selectedPlace!.formattedAddress ?? ""),
             ],
           ),
         ));

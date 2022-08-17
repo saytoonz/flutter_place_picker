@@ -39,8 +39,7 @@ class AutoCompleteSearch extends StatefulWidget {
       this.initialSearchString,
       this.searchForInitialValue,
       this.autocompleteOnTrailingWhitespace})
-      : assert(searchBarController != null),
-        super(key: key);
+      : super(key: key);
 
   final String? sessionToken;
   final String? hintText;
@@ -208,8 +207,6 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
 
   _searchPlace(String searchTerm) {
     this.provider.setPrevSearchTerm = searchTerm;
-
-    if (context == null) return;
 
     _clearOverlay();
 

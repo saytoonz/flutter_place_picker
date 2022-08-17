@@ -1,6 +1,6 @@
 # Google Maps Place Picker
 
-A Flutter plugin which provides 'Picking Place' using [Open Street](https://developers.google.com/maps/), [Here Maps](https://developers.google.com/maps/) and [Google Maps](https://developers.google.com/maps/) widget.
+A Flutter plugin which provides 'Picking Place' using [Open Street](https://www.openstreetmap.org/), [Here Maps](https://www.here.com/) and [Google Maps](https://developers.google.com/maps/) widget.
 
 
 Much thanks to  [Terry Kwon](https://github.com/fysoul17)   
@@ -12,7 +12,7 @@ Fetching current location using Baseflow's [geolocator](https://pub.dev/packages
 Place and Geocoding API using hadrienlejard's [google_maps_webservice](https://pub.dev/packages/google_maps_webservice)   
 Builder using kevmoo's [tuple](https://pub.dev/packages/tuple)   
 
-The package comes along with Laravel(PHP Framework) server which you can host for on your own. [Link to serve repository here...](https://github.com/saytoonz/save-maps)
+The package comes along with Laravel(PHP Framework) server which you can host for on your own. [Link to serve repository here...](https://github.com/saytoonz/saved-maps)
 
 ## Preview
 ![](preview.gif)
@@ -170,8 +170,8 @@ addressComponents | List\<AddressComponent\> | An array containing the separate 
 #### PickResult (Optional)
 Parameter | Type | Description
 --------- | ---- | -----------
-adrAddress | String | A representation of the place's address in the [adr microformat](http://microformats.org/wiki/adr)
-formattedPhoneNumber | String | Contains the place's phone number in its [local format](http://en.wikipedia.org/wiki/Local_conventions_for_writing_telephone_numbers)
+adrAddress | String | A representation of the place's address in the [adr microformat](https://microformats.org/wiki/adr)
+formattedPhoneNumber | String | Contains the place's phone number in its [local format](https://en.wikipedia.org/wiki/Local_conventions_for_writing_telephone_numbers)
 id | String | ? (Not documented at Google - see more info below)
 reference | String | ? (Not documented at Google - see more info below)
 icon | String | The URL of a suggested icon which may be displayed to the user when indicating this result on a map.
@@ -333,8 +333,11 @@ Please file feature requests and bugs at the [issue tracker][tracker].
 <a href="https://www.buymeacoffee.com/saytoonz" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 
+## Connect with me:
+[<img align="left" alt="Sam | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][twitter](https://twitter.com/saytoonz)
+[<img align="left" alt="Sam | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin](https://www.linkedin.com/in/samuel-annin-yeboah-427564142/)
+[<img align="left" alt="Sam | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram](https://instagram.com/saytoonz)
 
 
 ## Visitors Count
-
-<img align="left" src = "https://profile-counter.glitch.me/rendom_avatar/count.svg" alt ="Loading">
+<img align="left" src = "https://profile-counter.glitch.me/flutter_place_picker/count.svg" alt ="Loading">
