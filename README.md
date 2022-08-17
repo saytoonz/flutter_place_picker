@@ -1,6 +1,9 @@
 # Google Maps Place Picker
 
-A Flutter plugin which provides 'Picking Place' using [Google Maps](https://developers.google.com/maps/) widget.
+A Flutter plugin which provides 'Picking Place' using [Open Street](https://developers.google.com/maps/), [Here Maps](https://developers.google.com/maps/) and [Google Maps](https://developers.google.com/maps/) widget.
+
+
+Much thanks to  [Terry Kwon](https://github.com/fysoul17)   
 
 The project relies on below packages.
 
@@ -9,6 +12,8 @@ Fetching current location using Baseflow's [geolocator](https://pub.dev/packages
 Place and Geocoding API using hadrienlejard's [google_maps_webservice](https://pub.dev/packages/google_maps_webservice)   
 Builder using kevmoo's [tuple](https://pub.dev/packages/tuple)   
 
+The package comes along with Laravel(PHP Framework) server which you can host for on your own. [Link to serve repository here...](https://github.com/saytoonz/save-maps)
+
 ## Preview
 ![](preview.gif)
 
@@ -16,7 +21,7 @@ Builder using kevmoo's [tuple](https://pub.dev/packages/tuple)
 If the package was useful or saved your time, please do not hesitate to buy me a cup of coffee! ;)  
 The more caffeine I get, the more useful projects I can make in the future. 
 
-<a href="https://www.buymeacoffee.com/Oj17EcZ" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://www.buymeacoffee.com/saytoonz" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Getting Started
 
@@ -324,8 +329,12 @@ Please file feature requests and bugs at the [issue tracker][tracker].
 
 [tracker]: https://github.com/saytoonz/flutter_place_picker/issues/new
 
-### Other useful packages you might be insterested
-[Firebase Auth Simplify](https://pub.dev/packages/firebase_auth_simplify)   
-[Material design Speed Dial](https://pub.dev/packages/flutter_speed_dial_material_design) 
 
 <a href="https://www.buymeacoffee.com/saytoonz" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+
+
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/rendom_avatar/count.svg" alt ="Loading">
