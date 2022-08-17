@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                       builder: (context) {
                         return FlutterPlacePicker(
                           apiKey:
-                              "Google Api Key here", // Needed to display google maps and
+                              "YOUR KEY HERE", // Needed to display google maps and
                           initialPosition: kInitialPosition,
                           useCurrentLocation: true,
                           selectInitialPosition: true,
