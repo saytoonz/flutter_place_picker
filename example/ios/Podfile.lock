@@ -1,10 +1,10 @@
 PODS:
   - Flutter (1.0.0)
-  - geolocator (6.2.0):
+  - geolocator_apple (1.2.0):
     - Flutter
   - google_maps_flutter (0.0.1):
     - Flutter
-    - GoogleMaps (< 3.10)
+    - GoogleMaps
   - GoogleMaps (3.9.0):
     - GoogleMaps/Maps (= 3.9.0)
   - GoogleMaps/Base (3.9.0)
@@ -12,15 +12,15 @@ PODS:
     - GoogleMaps/Base
   - package_info_plus (0.4.5):
     - Flutter
-  - "permission_handler (5.1.0+2)":
+  - permission_handler_apple (9.0.4):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - geolocator (from `.symlinks/plugins/geolocator/ios`)
+  - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
   - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
-  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
 
 SPEC REPOS:
   trunk:
@@ -29,22 +29,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  geolocator:
-    :path: ".symlinks/plugins/geolocator/ios"
+  geolocator_apple:
+    :path: ".symlinks/plugins/geolocator_apple/ios"
   google_maps_flutter:
     :path: ".symlinks/plugins/google_maps_flutter/ios"
   package_info_plus:
     :path: ".symlinks/plugins/package_info_plus/ios"
-  permission_handler:
-    :path: ".symlinks/plugins/permission_handler/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  geolocator: f5e3de65e241caba7ce3e8a618803387bda73384
-  google_maps_flutter: c7f9c73576de1fbe152a227bfd6e6c4ae8088619
+  geolocator_apple: cc556e6844d508c95df1e87e3ea6fa4e58c50401
+  google_maps_flutter: c59fc576c0d0c7f4dc4bd63832c862d22d5a7c6d
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
-  permission_handler: ccb20a9fad0ee9b1314a52b70b76b473c5f8dab0
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
 
 PODFILE CHECKSUM: ef19549a9bc3046e7bb7d2fab4d021637c0c58a3
 
