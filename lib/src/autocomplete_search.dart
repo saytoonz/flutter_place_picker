@@ -312,7 +312,8 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
     if (searchTerm.isNotEmpty) {
       //! SEARCH FROM BACKEND
 
-      String resp = await Get().fromServer("${Urls.localMapSearch}$searchTerm");
+      String resp = await Get()
+          .fromServer("${provider.serverUrl}${Urls.localMapSearch}$searchTerm");
 
       try {
         dynamic jRes = jsonDecode(resp);
@@ -356,7 +357,7 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
             }
 
             //! save Predictions to local server......
-            Post().toServer(Urls.savePlaceId, {
+            Post().toServer("${provider.serverUrl}${Urls.savePlaceId}", {
               "places": response.predictions
                   .map((e) =>
                       {'description': e.description, 'place_id': e.placeId})

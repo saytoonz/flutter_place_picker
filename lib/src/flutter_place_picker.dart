@@ -114,7 +114,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
     PickResult result = PickResult.fromGeocodingResult(response.results[0]);
 
     //! Save address to local map
-    Post().toServer(Urls.saveLocalMap, {
+    Post().toServer("${provider.serverUrl}${Urls.saveLocalMap}", {
       "lat": result.geometry!.location.lat,
       "lng": result.geometry!.location.lng,
       "description": result.formattedAddress,
@@ -141,7 +141,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
 
       provider.selectedPlace =
           PickResult.fromPlaceDetailResult(detailResponse.result);
-      Post().toServer(Urls.saveLocalMap, {
+      Post().toServer("${provider.serverUrl}${Urls.saveLocalMap}", {
         "lat": detailResponse.result.geometry!.location.lat,
         "lng": detailResponse.result.geometry!.location.lng,
         "description": detailResponse.result.formattedAddress,

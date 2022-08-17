@@ -26,6 +26,7 @@ class FlutterPlacePicker extends StatefulWidget {
   FlutterPlacePicker({
     Key? key,
     required this.apiKey,
+    this.serverUrl,
     this.onPlacePicked,
     required this.initialPosition,
     this.useCurrentLocation,
@@ -68,6 +69,7 @@ class FlutterPlacePicker extends StatefulWidget {
   }) : super(key: key);
 
   final String apiKey;
+  final String? serverUrl;
 
   final LatLng initialPosition;
   final bool? useCurrentLocation;
@@ -205,6 +207,10 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
     provider.sessionToken = Uuid().generateV4();
     provider.desiredAccuracy = widget.desiredLocationAccuracy;
     provider.setMapType(widget.initialMapType);
+
+    if ((widget.serverUrl ?? "").isNotEmpty) {
+      provider.setServerUrl = widget.serverUrl!;
+    }
 
     return provider;
   }
@@ -396,7 +402,7 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
     PickResult result = PickResult.fromPlaceDetailResult(response.result);
 
     //! SAVE Selected result ...
-    Post().toServer(Urls.saveLocalMap, {
+    Post().toServer("${provider!.serverUrl}${Urls.saveLocalMap}", {
       "lat": result.geometry!.location.lat,
       "lng": result.geometry!.location.lng,
       "description": result.formattedAddress,
