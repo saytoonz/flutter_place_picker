@@ -334,9 +334,9 @@ Please file feature requests and bugs at the [issue tracker][tracker].
 
 
 ## Connect with me:
-[<img align="left" alt="Sam | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][twitter](https://twitter.com/saytoonz)
-[<img align="left" alt="Sam | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin](https://www.linkedin.com/in/samuel-annin-yeboah-427564142/)
-[<img align="left" alt="Sam | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram](https://instagram.com/saytoonz)
+[<img align="left" alt="Sam | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />](https://twitter.com/saytoonz)
+[<img align="left" alt="Sam | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />](https://www.linkedin.com/in/samuel-annin-yeboah-427564142/)
+[<img align="left" alt="Sam | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />](https://instagram.com/saytoonz)
 
 
 ## Visitors Count
