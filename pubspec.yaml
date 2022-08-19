@@ -1,6 +1,6 @@
 name: flutter_place_picker
 description: A Flutter plugin which provides 'Picking Places' using OpenStreet, Here Maps and Google Maps.
-version: 0.0.1-dev.2
+version: 0.0.1-dev.3
 homepage: https://github.com/saytoonz/flutter_place_picker
 
 environment:

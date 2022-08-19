@@ -194,7 +194,7 @@ reviews | List\<Review\> | JSON array of up to five reviews
 Parameter | Type | Description
 --------- | ---- | -----------
 apiKey | String | (Required) Your google map API Key
-serverUrl | String |  Your host server url (eg. https://www.your-server.com/api/)
+serverUrl | String | Your host server url (eg. https://www.your-server.com/api/). Null or empty serverUrl uses our fallback Url (phplaravel-641695-2829489.cloudwaysapps.com/api/)
 onPlacePicked | Callback(PickResult) | Invoked when user picks the place and selects to use it. **This will not be called if you manually build 'selectedPlaceWidgetBuilder' as you will override default 'Select here' button.**
 initialPosition | LatLng | (Required) Initial center position of google map when it is created. If useCurrentLocation is set to true, it will try to get device's current location first using GeoLocator. 
 useCurrentLocation | bool | Whether to use device's current location for initial center position. This will be used instead of initial position when it is set to true AND user ALLOW to collect their location. If DENIED, initialPosition will be used.

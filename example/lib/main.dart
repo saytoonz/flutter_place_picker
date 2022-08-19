@@ -94,6 +94,7 @@ class _HomePageState extends State<HomePage> {
                             Navigator.of(context).pop();
                             setState(() {});
                           },
+                          // serverUrl: "https://www.your-server.com/api/",
                           //automaticallyImplyAppBarLeading: false,
                           //autocompleteLanguage: "ko",
                           // selectedPlaceWidgetBuilder: (_, selectedPlace, state, isSearchBarFocused) {

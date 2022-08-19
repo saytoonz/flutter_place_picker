@@ -411,8 +411,6 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
     });
 
     provider!.selectedPlace = result;
-    debugPrint(result.toPlaceDetailResultMap()["location"]['lat']);
-    debugPrint(result.toPlaceDetailResultMap()["location"]['lng']);
 
     // Prevents searching again by camera movement.
     provider!.isAutoCompleteSearching = true;
