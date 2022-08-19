@@ -209,7 +209,11 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
     provider.setMapType(widget.initialMapType);
 
     if ((widget.serverUrl ?? "").isNotEmpty) {
-      provider.setServerUrl = widget.serverUrl!;
+      if (widget.serverUrl!.endsWith("/")) {
+        provider.setServerUrl = widget.serverUrl!;
+      } else {
+        provider.setServerUrl = "${widget.serverUrl!}/";
+      }
     }
 
     return provider;
@@ -334,9 +338,12 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
     provider!.placeSearchingState = SearchingState.Searching;
 
     if (localPrediction != null) {
-      //! IF LocalPrediction HAS LatLng
-      if (localPrediction.lat != null && localPrediction.lng != null) {
+      //!CHECk IF LocalMap NOT NULL
+      if (localPrediction.localMap != null &&
+          localPrediction.localMap!.lat != null &&
+          localPrediction.localMap!.lng != null) {
         provider!.isAutoCompleteSearching = true;
+
         await _moveTo(localPrediction.lat!, localPrediction.lng!);
 
         PickResult result = PickResult();
@@ -351,13 +358,9 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
 
         return result;
       } else {
-        //!CHECk IF LocalMap NOT NULL
-
-        if (localPrediction.localMap != null &&
-            localPrediction.localMap!.lat != null &&
-            localPrediction.localMap!.lng != null) {
+        //! IF LocalPrediction HAS LatLng
+        if (localPrediction.lat != null && localPrediction.lng != null) {
           provider!.isAutoCompleteSearching = true;
-
           await _moveTo(localPrediction.lat!, localPrediction.lng!);
 
           PickResult result = PickResult();
@@ -375,8 +378,6 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
           _getLocationWithPlaceId(localPrediction.placeId!);
         }
       }
-
-      return print(prediction?.description ?? localPrediction.formattedAddress);
     } else {
       _getLocationWithPlaceId(prediction!.placeId!);
     }

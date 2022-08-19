@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_place_picker/flutter_place_picker.dart';
 import 'package:flutter_place_picker/models/local_prediction.dart';
 import 'package:flutter_place_picker/providers/place_provider.dart';
@@ -254,10 +253,7 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
           SizedBox(
             height: 24,
             width: 24,
-            child: SpinKitCircle(
-              color: Theme.of(context).primaryColorDark,
-              size: 50.0,
-            ),
+            child: CircularProgressIndicator(),
           ),
           SizedBox(width: 24),
           Expanded(

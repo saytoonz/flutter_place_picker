@@ -135,7 +135,8 @@ class PlaceProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _serverUrl = "http://phplaravel-641701-2823310.cloudwaysapps.com/api/";
+  String _serverUrl =
+      "https://phplaravel-641695-2829489.cloudwaysapps.com/api/";
   String get serverUrl => _serverUrl;
   set setServerUrl(String newUrl) {
     _serverUrl = newUrl;

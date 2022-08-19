@@ -120,7 +120,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
       "description": result.formattedAddress,
       "place_id": response.results[0].placeId,
     });
-    print(usePlaceDetailSearch);
+
     if (usePlaceDetailSearch) {
       final PlacesDetailsResponse detailResponse =
           await provider.places.getDetailsByPlaceId(
