@@ -147,7 +147,6 @@ Navigator.push(
         builder: (context) => FlutterPlacePicker(
           apiKey: APIKeys.apiKey,   // Put YOUR OWN KEY here.
           onPlacePicked: (result) { 
-            print(result.address); 
             Navigator.of(context).pop();
           },
           initialPosition: HomePage.kInitialPosition,
@@ -212,7 +211,7 @@ usePinPointingSearch | bool | Defaults to true. This will allow user to drag map
 usePlaceDetailSearch | bool | Defaults to false. Setting this to true will get detailed result from searching by dragging the map, but will use +1 request on Place Detail API.
 onAutoCompleteFailed | Callback(String) | Invoked when auto complete search is failed
 onGeocodingSearchFailed | Callback(String) | Invoked when searching place by dragging the map failed
-onMapCreated | MapCreatedCallback | Returens google map controller when created
+onMapCreated | MapCreatedCallback | Returns google map controller when created
 selectedPlaceWidgetBuilder | WidgetBuilder | Specified on below section
 pinBuilder | WidgetBuilder | Specified on below section
 autocompleteOffset | num | The position, in the input term, of the last character that the service uses to match predictions
@@ -220,7 +219,7 @@ autocompleteRadius | num | The distance (in meters) within which to return place
 autocompleteLanguage | String | The [language code](https://developers.google.com/maps/faq#languagesupport), indicating in which language the results should be returned, if possible. 
 autocompleteComponents | List\<Components\> | A grouping of places to which you would like to restrict your results. Currently, you can use components to filter by up to 5 countries.
 autocompleteTypes | List\<String\> | The types of place results to return. See [Place Types](https://developers.google.com/places/web-service/autocomplete#place_types).
-strictbounds | bool | Returns only those places that are strictly within the region defined by location and radius.
+strictBounds | bool | Returns only those places that are strictly within the region defined by location and radius.
 region | String | region — The region code, specified as a ccTLD (country code top-level domain) two-character value. Most ccTLD codes are identical to ISO 3166-1 codes, with some exceptions. This parameter will only influence, not fully restrict, search results. If more relevant results exist outside of the specified region, they may be included. **When this parameter is used, the country name is omitted from the resulting formatted_address for results in the specified region.**
 selectInitialPosition | bool | Whether to display selected place on initial map load. Defaults to false.
 resizeToAvoidBottomInset | bool | Refer to Scaffold's resizeToAvoidBottomInset property.

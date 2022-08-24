@@ -53,7 +53,7 @@ class PlaceProvider extends ChangeNotifier {
         currentPosition = null;
       }
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       currentPosition = null;
     }
 

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
+import 'package:geocoding/geocoding.dart' as geocoding;
 
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_place_picker/flutter_place_picker.dart';
@@ -93,6 +94,35 @@ class GoogleMapPlacePicker extends StatelessWidget {
 
     provider.placeSearchingState = SearchingState.Searching;
 
+    try {
+      List<geocoding.Placemark> placemarks =
+          await geocoding.placemarkFromCoordinates(
+              provider.cameraPosition!.target.latitude,
+              provider.cameraPosition!.target.longitude);
+
+      PickResult result = PickResult();
+      result.formattedAddress = placemarks[0].name;
+      result.geometry = Geometry(
+        location: Location(
+            lat: provider.cameraPosition!.target.latitude,
+            lng: provider.cameraPosition!.target.longitude),
+      );
+      result.name = placemarks[0].name;
+      result.adrAddress = placemarks[0].name;
+
+      provider.selectedPlace = result;
+      Post().toServer("${provider.serverUrl}${Urls.saveLocalMap}", {
+        "lat": provider.cameraPosition!.target.latitude,
+        "lng": provider.cameraPosition!.target.latitude,
+        "description": placemarks[0].name,
+      });
+
+      provider.selectedPlace = result;
+      return provider.placeSearchingState = SearchingState.Idle;
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+
     final GeocodingResponse response =
         await provider.geocoding.searchByLocation(
       Location(
@@ -130,7 +160,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
 
       if (detailResponse.errorMessage?.isNotEmpty == true ||
           detailResponse.status == "REQUEST_DENIED") {
-        print("Fetching details by placeId Error: " +
+        debugPrint("Fetching details by placeId Error: " +
             detailResponse.errorMessage!);
         if (onSearchFailed != null) {
           onSearchFailed!(detailResponse.status);

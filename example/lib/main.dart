@@ -83,6 +83,8 @@ class _HomePageState extends State<HomePage> {
                           selectInitialPosition: true,
                           usePlaceDetailSearch: false,
                           region: 'gh',
+                          strictBounds: true,
+
                           onPlacePicked: (result) {
                             selectedPlace = result;
 
@@ -96,7 +98,6 @@ class _HomePageState extends State<HomePage> {
                           },
                           // serverUrl: "https://www.your-server.com/api/",
                           //automaticallyImplyAppBarLeading: false,
-                          //autocompleteLanguage: "ko",
                           // selectedPlaceWidgetBuilder: (_, selectedPlace, state, isSearchBarFocused) {
                           //   print("state: $state, isSearchBarFocused: $isSearchBarFocused");
                           //   return isSearchBarFocused

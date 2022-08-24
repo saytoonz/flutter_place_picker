@@ -34,8 +34,6 @@ class FlutterPlacePicker extends StatefulWidget {
     this.onMapCreated,
     this.hintText,
     this.searchingText,
-    // this.searchBarHeight,
-    // this.contentPadding,
     this.onAutoCompleteFailed,
     this.onGeocodingSearchFailed,
     this.proxyBaseUrl,
@@ -47,7 +45,7 @@ class FlutterPlacePicker extends StatefulWidget {
     this.initialMapType = MapType.normal,
     this.enableMapTypeButton = true,
     this.enableMyLocationButton = true,
-    this.myLocationButtonCooldown = 10,
+    this.myLocationButtonCoolDown = 10,
     this.usePinPointingSearch = true,
     this.usePlaceDetailSearch = false,
     this.autocompleteOffset,
@@ -55,7 +53,7 @@ class FlutterPlacePicker extends StatefulWidget {
     this.autocompleteLanguage,
     this.autocompleteComponents,
     this.autocompleteTypes,
-    this.strictbounds,
+    this.strictBounds,
     this.region,
     this.selectInitialPosition = false,
     this.resizeToAvoidBottomInset = true,
@@ -68,39 +66,92 @@ class FlutterPlacePicker extends StatefulWidget {
     this.hidePlaceDetailsWhenDraggingPin = true,
   }) : super(key: key);
 
+  ///	(Required) Your google map API Key
   final String apiKey;
+
+  /// Your host server url (eg. https://www.your-server.com/api/).
+  /// Null or empty serverUrl uses our fallback Url
+  /// (phplaravel-641695-2829489.cloudwaysapps.com/api/)
   final String? serverUrl;
 
+  ///LatLng	(Required) Initial center position of google map when it is created.
+  /// If useCurrentLocation is set to true, it will try to get device's
+  ///  current location first using GeoLocator.
   final LatLng initialPosition;
+
+  /// Whether to use device's current location for initial center position.
+  /// This will be used instead of initial position when it is set to true AND
+  /// user ALLOW to collect their location. If DENIED, initialPosition will be used.
   final bool? useCurrentLocation;
+
+  ///Accuracy of fetching current location. Defaults to 'high' [LocationAccuracy.high].
   final LocationAccuracy desiredLocationAccuracy;
 
+  ///Returns google map controller when created
   final MapCreatedCallback? onMapCreated;
 
+  /// Hint text of search bar
   final String? hintText;
-  final String? searchingText;
-  // final double searchBarHeight;
-  // final EdgeInsetsGeometry contentPadding;
 
+  ///A text which appears when searching is performing. Default to 'Searching...'
+  final String? searchingText;
+
+  /// Invoked when auto complete search is failed
   final ValueChanged<String>? onAutoCompleteFailed;
+
+  /// Invoked when searching place by dragging the map failed
   final ValueChanged<String>? onGeocodingSearchFailed;
+
+  /// Debounce timer for auto complete input. Default to 500
   final int autoCompleteDebounceInMilliseconds;
+
+  /// Debounce timer for searching place with camera(map) dragging. Defaults to 750
   final int cameraMoveDebounceInMilliseconds;
 
+  ///	MapTypes of google map. Defaults to normal[MapType.normal].
   final MapType initialMapType;
-  final bool enableMapTypeButton;
-  final bool enableMyLocationButton;
-  final int myLocationButtonCooldown;
 
+  /// Whether to display MapType change button on the map
+  final bool enableMapTypeButton;
+
+  /// Whether to display my location button on the map
+  final bool enableMyLocationButton;
+
+  /// CoolDown time in seconds for the 'myLocationButton'. Defaults to 10 seconds.
+  final int myLocationButtonCoolDown;
+
+  /// Defaults to true. This will allow user to drag map and get a place info where the pin is pointing.
   final bool usePinPointingSearch;
+
+  /// Defaults to false. Setting this to true will get detailed result from
+  /// searching by dragging the map, but will use +1 request on Place Detail API.
   final bool usePlaceDetailSearch;
 
+  /// The position, in the input term, of the last character that the service uses to match predictions
   final num? autocompleteOffset;
+
+  /// The distance (in meters) within which to return place results
   final num? autocompleteRadius;
+
+  ///The [language code](https://developers.google.com/maps/faq#languagesupport), indicating in which language the results should be returned, if possible.
   final String? autocompleteLanguage;
+
+  ///The types of place results to return. See [Place Types](https://developers.google.com/places/web-service/autocomplete#place_types).
   final List<String>? autocompleteTypes;
+
+  /// A grouping of places to which you would like to restrict your results.
+  /// Currently, you can use components to filter by up to 5 countries.
   final List<Component>? autocompleteComponents;
-  final bool? strictbounds;
+
+  /// bool	Returns only those places that are strictly within the region defined by location and radius.
+  final bool? strictBounds;
+
+  /// The region code, specified as a ccTLD (country code top-level domain) two-character value.
+  /// Most ccTLD codes are identical to ISO 3166-1 codes, with some exceptions.
+  ///  This parameter will only influence, not fully restrict, search results.
+  /// If more relevant results exist outside of the specified region, they may be included.
+  ///  When this parameter is used, the country name is omitted from the resulting
+  /// formatted_address for results in the specified region
   final String? region;
 
   /// If true the [body] and the scaffold's floating widgets should size
@@ -114,6 +165,7 @@ class FlutterPlacePicker extends StatefulWidget {
   /// Defaults to true.
   final bool resizeToAvoidBottomInset;
 
+  /// Whether to display selected place on initial map load. Defaults to false.
   final bool selectInitialPosition;
 
   /// By using default setting of Place Picker, it will result result when user hits the select here button.
@@ -319,7 +371,7 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
               autocompleteLanguage: widget.autocompleteLanguage,
               autocompleteComponents: widget.autocompleteComponents,
               autocompleteTypes: widget.autocompleteTypes,
-              strictbounds: widget.strictbounds,
+              strictBounds: widget.strictBounds,
               region: widget.region,
               initialSearchString: widget.initialSearchString,
               searchForInitialValue: widget.searchForInitialValue,
@@ -495,7 +547,7 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
         // Prevent to click many times in short period.
         if (provider!.isOnUpdateLocationCooldown == false) {
           provider!.isOnUpdateLocationCooldown = true;
-          Timer(Duration(seconds: widget.myLocationButtonCooldown), () {
+          Timer(Duration(seconds: widget.myLocationButtonCoolDown), () {
             provider!.isOnUpdateLocationCooldown = false;
           });
           await provider!
