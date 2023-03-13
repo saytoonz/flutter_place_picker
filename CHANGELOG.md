@@ -1,3 +1,7 @@
+## [0.0.1-dev.4] - 03/March/2023
+- Dependencies update
+- Clean ups documentation
+
 ## [0.0.1-dev.4] - 24/Aug/2022
 - ReadMe update
 - Placemark(geocoding) added to get current location address without internet connectivity

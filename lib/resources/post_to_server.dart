@@ -1,7 +1,7 @@
 import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+
 
 class Post {
   late Response response;
@@ -28,11 +28,11 @@ class Post {
           progress = "$sent" " Bytes of " "$total Bytes - " +
               percentage +
               " % uploaded";
-          debugPrint("================$progress");
+          // debugPrint("================$progress");
         },
       );
-      debugPrint("================${response.toString()};");
-      debugPrint("================${url.toString()};");
+      // debugPrint("================${response.toString()};");
+      // debugPrint("================${url.toString()};");
       if (response.statusCode == 200) {
         return response.toString();
       } else {
@@ -40,7 +40,7 @@ class Post {
             {"error": true, "msg": "Error during connection to server."});
       }
     } catch (e) {
-      debugPrint('error from server: $e');
+      // debugPrint('error from server: $e');
       return jsonEncode({
         "error": true,
         "msg":

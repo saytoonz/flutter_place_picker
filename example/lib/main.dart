@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_place_picker/flutter_place_picker.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_place_picker/flutter_place_picker.dart';
 
 // Your api key storage.
 
@@ -49,7 +49,7 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -84,7 +84,6 @@ class _HomePageState extends State<HomePage> {
                           usePlaceDetailSearch: false,
                           region: 'gh',
                           strictBounds: true,
-
                           onPlacePicked: (result) {
                             selectedPlace = result;
 

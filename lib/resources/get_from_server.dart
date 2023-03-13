@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
@@ -20,10 +19,8 @@ class Get {
         onReceiveProgress: (int sent, int total) {
           String percentage = (sent / total * 100).toStringAsFixed(2);
 
-          progress = "$sent" " Bytes of " "$total Bytes - " +
-              percentage +
-              " % uploaded";
-          debugPrint("================$progress");
+          progress = "$sent Bytes of $total Bytes - $percentage % uploaded";
+          // debugPrint("================$progress");
         },
       );
       if (response.statusCode! >= 200 && response.statusCode! < 400) {
@@ -37,7 +34,7 @@ class Get {
         );
       }
     } catch (e) {
-      debugPrint(e.toString());
+      // debugPrint(e.toString());
       return jsonEncode(
         {
           "error": true,

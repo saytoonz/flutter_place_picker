@@ -1,18 +1,18 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:google_maps_webservice/places.dart';
+import 'package:flutter_place_picker/utils/urls.dart';
 import 'package:flutter_place_picker/flutter_place_picker.dart';
 import 'package:flutter_place_picker/models/local_prediction.dart';
+import 'package:flutter_place_picker/widgets/prediction_tile.dart';
 import 'package:flutter_place_picker/providers/place_provider.dart';
+import 'package:flutter_place_picker/resources/post_to_server.dart';
 import 'package:flutter_place_picker/providers/search_provider.dart';
 import 'package:flutter_place_picker/resources/get_from_server.dart';
-import 'package:flutter_place_picker/resources/post_to_server.dart';
-import 'package:flutter_place_picker/utils/urls.dart';
-import 'package:flutter_place_picker/widgets/prediction_tile.dart';
 import 'package:flutter_place_picker/providers/autocomplete_search_controller.dart';
-import 'package:google_maps_webservice/places.dart';
-import 'package:provider/provider.dart';
+
 
 class AutoCompleteSearch extends StatefulWidget {
   const AutoCompleteSearch(
@@ -242,7 +242,7 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
       ),
     );
 
-    Overlay.of(context)!.insert(overlayEntry!);
+    Overlay.of(context).insert(overlayEntry!);
   }
 
   Widget _buildSearchingOverlay() {

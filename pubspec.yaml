@@ -1,6 +1,6 @@
 name: flutter_place_picker
 description: A Flutter plugin which provides 'Picking Places' using OpenStreet, Here Maps and Google Maps.
-version: 0.0.1-dev.4
+version: 0.0.1-dev.5
 homepage: https://github.com/saytoonz/flutter_place_picker
 
 environment:
@@ -10,16 +10,16 @@ dependencies:
   flutter:
     sdk: flutter
 
-  google_maps_flutter: ^2.1.12
-  geolocator: ^9.0.1
-  permission_handler: ^10.0.0
-  provider: ^6.0.3
+  google_maps_flutter: ^2.2.5
+  geolocator: ^9.0.2
+  permission_handler: ^10.2.0
+  provider: ^6.0.5
   google_maps_webservice: ^0.0.20-nullsafety.5
-  google_api_headers: ^1.3.0
-  tuple: ^2.0.0
-  dio: ^4.0.6
+  google_api_headers: ^1.5.0+1
+  tuple: ^2.0.1
+  dio: ^5.0.2
   http: ^0.13.5
-  geocoding: ^2.0.4
+  geocoding: ^2.1.0
 
 dev_dependencies:
   flutter_test:

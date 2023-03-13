@@ -1,16 +1,16 @@
 PODS:
   - Flutter (1.0.0)
-  - geocoding (1.0.5):
+  - geocoding_ios (1.0.5):
     - Flutter
   - geolocator_apple (1.2.0):
     - Flutter
-  - google_maps_flutter (0.0.1):
+  - google_maps_flutter_ios (0.0.1):
     - Flutter
     - GoogleMaps
-  - GoogleMaps (3.9.0):
-    - GoogleMaps/Maps (= 3.9.0)
-  - GoogleMaps/Base (3.9.0)
-  - GoogleMaps/Maps (3.9.0):
+  - GoogleMaps (5.2.0):
+    - GoogleMaps/Maps (= 5.2.0)
+  - GoogleMaps/Base (5.2.0)
+  - GoogleMaps/Maps (5.2.0):
     - GoogleMaps/Base
   - package_info_plus (0.4.5):
     - Flutter
@@ -19,9 +19,9 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - geocoding (from `.symlinks/plugins/geocoding/ios`)
+  - geocoding_ios (from `.symlinks/plugins/geocoding_ios/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
-  - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
+  - google_maps_flutter_ios (from `.symlinks/plugins/google_maps_flutter_ios/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
 
@@ -32,12 +32,12 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  geocoding:
-    :path: ".symlinks/plugins/geocoding/ios"
+  geocoding_ios:
+    :path: ".symlinks/plugins/geocoding_ios/ios"
   geolocator_apple:
     :path: ".symlinks/plugins/geolocator_apple/ios"
-  google_maps_flutter:
-    :path: ".symlinks/plugins/google_maps_flutter/ios"
+  google_maps_flutter_ios:
+    :path: ".symlinks/plugins/google_maps_flutter_ios/ios"
   package_info_plus:
     :path: ".symlinks/plugins/package_info_plus/ios"
   permission_handler_apple:
@@ -45,10 +45,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
-  geocoding: 32cfcdb16d38d907caaba65e2e42ad10d38bee58
+  geocoding_ios: a389ea40f6f548de6e63006a2e31bf66ff80769a
   geolocator_apple: cc556e6844d508c95df1e87e3ea6fa4e58c50401
-  google_maps_flutter: c59fc576c0d0c7f4dc4bd63832c862d22d5a7c6d
-  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  google_maps_flutter_ios: 66201f392bf62d500f07670a30488a247b9bb5b9
+  GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
   package_info_plus: 6c92f08e1f853dc01228d6f553146438dafcd14e
   permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
 

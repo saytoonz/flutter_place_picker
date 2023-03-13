@@ -4,8 +4,8 @@
 # This file should be version controlled.
 
 version:
-  revision: ba5181b7885340bacd370eac779c319dfd82670e
-  channel: master
+  revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+  channel: stable
 
 project_type: app
 
@@ -13,26 +13,26 @@ project_type: app
 migration:
   platforms:
     - platform: root
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: android
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: ios
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: linux
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: macos
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: web
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
     - platform: windows
-      create_revision: ba5181b7885340bacd370eac779c319dfd82670e
-      base_revision: ba5181b7885340bacd370eac779c319dfd82670e
+      create_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
+      base_revision: 12cb4eb7a009f52b347b62ade7cb4854b926af72
 
   # User provided section
 
