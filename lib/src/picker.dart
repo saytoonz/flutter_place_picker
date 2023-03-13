@@ -1,22 +1,22 @@
 import 'dart:async';
-
+import 'dart:io' show Platform;
+import 'package:http/http.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_webservice/places.dart';
+import 'package:flutter_place_picker/utils/urls.dart';
+import 'package:flutter_place_picker/utils/uuid.dart';
 import 'package:google_api_headers/google_api_headers.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_place_picker/flutter_place_picker.dart';
 import 'package:flutter_place_picker/models/local_prediction.dart';
+import 'package:flutter_place_picker/src/autocomplete_search.dart';
 import 'package:flutter_place_picker/providers/place_provider.dart';
 import 'package:flutter_place_picker/resources/post_to_server.dart';
-import 'package:flutter_place_picker/src/autocomplete_search.dart';
-import 'package:flutter_place_picker/providers/autocomplete_search_controller.dart';
 import 'package:flutter_place_picker/src/flutter_place_picker.dart';
-import 'package:flutter_place_picker/utils/urls.dart';
-import 'package:flutter_place_picker/utils/uuid.dart';
-import 'package:google_maps_webservice/places.dart';
-import 'package:http/http.dart';
-import 'package:provider/provider.dart';
-import 'dart:io' show Platform;
+import 'package:flutter_place_picker/providers/autocomplete_search_controller.dart';
+
 
 enum PinState { Preparing, Idle, Dragging }
 
@@ -311,7 +311,7 @@ class _FlutterPlacePickerState extends State<FlutterPlacePicker> {
             children.addAll([
               Icon(
                 Icons.error_outline,
-                color: Theme.of(context).errorColor,
+                color: Theme.of(context).colorScheme.error,
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 16),
